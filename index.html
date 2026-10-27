@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uno Replica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark">U</div>
+          <div>
+            <div class="eyebrow">Classic card game</div>
+            <h1>Uno Replica</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <button id="new-game-btn" class="primary-btn">New game</button>
+        </div>
+      </header>
+
+      <main class="game-board">
+        <aside class="panel left-panel">
+          <section class="panel-section">
+            <h2>Game</h2>
+            <div class="stat-block">
+              <span class="label">Current turn</span>
+              <strong id="current-player-name">Player 1</strong>
+            </div>
+            <div class="stat-block">
+              <span class="label">Draw pile</span>
+              <strong id="draw-count">0 cards</strong>
+            </div>
+            <div class="stat-block">
+              <span class="label">Discard top</span>
+              <strong id="discard-top-label">-</strong>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <h2>Controls</h2>
+            <div class="control-stack">
+              <button id="draw-card-btn" class="secondary-btn">Draw card</button>
+              <button id="uno-btn" class="secondary-btn">Call UNO</button>
+            </div>
+          </section>
+
+          <section class="panel-section">
+            <h2>Rules</h2>
+            <ul class="rules-list">
+              <li>Match color, number, or action</li>
+              <li>Wild cards set the next color</li>
+              <li>Skip, reverse, and draw-two alter flow</li>
+              <li>Winner is the first to empty hand</li>
+            </ul>
+          </section>
+        </aside>
+
+        <section class="table-area">
+          <div class="center-pile">
+            <div class="pile-stack pile-back" id="draw-pile" aria-label="Draw pile"></div>
+            <div id="discard-pile" class="pile-stack pile-front" aria-label="Discard pile"></div>
+          </div>
+
+          <div id="players-area" class="players-area" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
